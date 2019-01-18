@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.LoginOrSignUp {
+    padding: $gutter;
+
+    &-form {
+        border: 1px solid $grey;
+        border-radius: $borderRadius;
+
+        &-selection {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid $grey;
+
+            &-item {
+                width: 50%;
+                text-align: center;
+                padding: 15px;
+                font-weight: bold;
+                cursor: pointer;
+
+                &.active {
+                    background-color: $yellowActive;
+                }
+
+                &:hover {
+                    background-color: $yellow;
+                }
+
+                &:first-child {
+                    border-right: 1px solid $grey;
+                }
+            }
+        }
+
+        &-activeform {
+            padding: $gutter;
+        }
+    }
+}

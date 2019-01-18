@@ -1,0 +1,44 @@
+@import '../variables.scss';
+
+.Head {
+    padding: $gutter;
+    border-bottom: 1px solid $grey;
+
+    &-search-input {
+        margin-top: $gutter;
+        display: flex;
+
+        input[type='text'] {
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+            border: 1px solid $grey;
+            border-top-left-radius: $borderRadius;
+            border-bottom-left-radius: $borderRadius;
+            border-right: none;
+            outline: none;
+
+            &:focus, &:focus + button {
+                border-color: #000;
+            }
+        }
+
+        button {
+            padding: 15px 25px;
+            border: 1px solid $grey;
+            background-color: $yellow;
+            border-top-right-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+            cursor: pointer;
+            outline: none;
+
+            &:hover {
+                background-color: $yellowHover;
+            }
+
+            &:active {
+                background-color: $yellowActive;
+            }
+        }
+    }
+}

@@ -1,0 +1,160 @@
+@import '../variables.scss';
+
+.List {
+    padding: $gutter;
+
+    &-item {
+        max-width: 100%;
+        border: 1px solid $grey;
+        border-radius: $borderRadius;
+        padding: 20px $gutter;
+        margin-bottom: 10px;
+
+        &:before {
+            content: ' ';
+            width: 15px;
+            height: 15px;
+            background-color: $orange;
+            border-radius: 3px;
+            position: absolute;
+            margin-top: -12px;
+            margin-left: -22px;
+        }
+
+        &.done::before {
+            background-color: green;
+        }
+
+        &-head {
+            border-bottom: 1px solid $grey;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+
+            &-input {
+                width: 100%;
+                padding: 5px;
+                font-size: 20px;
+                font-weight: bold;
+                background: transparent;
+                color: #000;
+                border: 1px solid transparent;
+
+                &.textarea {
+                    border-color: $grey;
+                    min-width: 80%;
+                    min-height: 60px;
+                }
+
+                &.isDone {
+                    color: $grey;
+                    text-decoration: line-through;
+                }
+
+                &-date {
+                    font-weight: normal;
+                    font-size: 14px;
+                    margin: 0px;
+                }
+            }
+
+            &-checkbox {
+                padding-right: 15px;
+                display: flex;
+
+                label {
+                    width: 25px;
+                    height: 25px;
+                    border: 2px solid $grey;
+                    border-radius: $borderRadius;
+                    display: inline-flex;
+                    cursor: pointer;
+                    transition: all .2s ease-in-out;
+
+                    &:hover {
+                        background-color: $yellowActive;
+                    }
+                    
+                    i {
+                        font-size: 28px;
+                        position: absolute;
+                        margin-top: -5px;
+                        margin-left: 2px;
+                        opacity: 0;
+                        color: green;
+                        transition: all .2s ease-in-out;
+                    }
+                }
+
+                input[type='checkbox'] {
+                    display: none;
+                }
+
+                input[type='checkbox']:checked + label {
+                    background-color: $yellowActive;
+                    border-color: green;
+
+                    i {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &-body {
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+
+            &-option {
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+                background-color: transparent;
+                margin-right: 15px;
+                padding: 10px 15px;
+                border: 1px solid $grey;
+                border-radius: $borderRadius;
+                outline: none;
+                cursor: pointer;
+
+                &.deleteButton {
+                    background-color: orangered;
+                    color: white;
+
+                    i {
+                        color: white;
+                    }
+
+                    &:hover {
+                        border-color: #000;
+                        background-color: red;
+                    }
+
+                    &:active {
+                        background-color: red;
+                    }
+                }
+
+                &:hover {
+                    border-color: #000;
+                    background-color: $yellow;
+                }
+
+                &:active {
+                    background-color: $yellowActive;
+                }
+
+                &.isEditting {
+                    background-color: mistyrose;
+                }
+
+                i {
+                    font-size: 12px;
+                    margin-right: 10px;
+                    color: #000;
+                }
+            }
+        }
+    }
+}

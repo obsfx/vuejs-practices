@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+
+    .info {
+        padding: 30px;
+        margin-bottom: -50px;
+
+        div {
+            margin-bottom: 5px;
+        }
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .userInfo {
+        font-size: 13px;
+        padding: 30px;
+        margin-bottom: -60px;
+
+        i {
+            font-size: 11px;
+            margin-right: 5px;
+        }
+    }
+}
+
+// --------
+@import 'normalize';
+@import 'variables';

@@ -1,0 +1,70 @@
+@import '../variables.scss';
+
+.FormComponents {
+
+    &-alerts {
+        margin-bottom: $gutter;
+
+        &-warning {
+            padding: 15px;
+            border: 1px solid $yellowActive;
+            border-radius: $borderRadius;
+            background-color: $yellow;
+        }
+    }
+
+    &-inputblock {
+        margin-bottom: 20px;
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid $grey;
+            border-radius: $borderRadius;
+            background: transparent;
+            outline: none;
+
+            &:hover {
+                border-color: #000;
+            }
+
+            &:focus {
+                border-color: #000;
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            background-color: transparent;
+            margin-right: 15px;
+            padding: 10px 15px;
+            border: 1px solid $grey;
+            border-radius: $borderRadius;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                border-color: #000;
+                background-color: $yellow;
+            }
+
+            &:active {
+                background-color: $yellowActive;
+            }
+
+            i {
+                font-size: 12px;
+                margin-right: 10px;
+                color: #000;
+            }
+        }
+    }
+}
