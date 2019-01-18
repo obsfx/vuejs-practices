@@ -1,6 +1,7 @@
 # vue_todo_app
+ **001-vuetodo** [Live](https://obsfx.github.io/vuejs/001/)
 
-> a basic todo app created with vuejs
+> a basic todo app created with vuejs & firebase
 
 ## Build Setup
 
