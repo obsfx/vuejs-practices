@@ -31,9 +31,16 @@
 		name: "App",
 		components: { Main, LoginOrSignUp },
 		created() {
-			if (JSON.parse(document.cookie)) {
-				this.setUserLogin(JSON.parse(document.cookie));
+			let isJson = true;
+			let data;
+
+			try {
+				data = JSON.parse(document.cookie);
+			} catch(e) {
+				isJson = false;
 			}
+
+			if (isJson) this.setUserLogin(JSON.parse(document.cookie));
 		},
 		data() {
 			return {

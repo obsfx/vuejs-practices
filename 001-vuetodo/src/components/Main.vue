@@ -3,7 +3,7 @@
 		<div class="userInfo">
 			<div><strong> <i class="fas fa-user-astronaut"></i> username : </strong> {{ userData.username }}</div>
 			<div><strong> <i class="fas fa-key" style="margin-left: -1px"></i> userkey : </strong> {{ userData.userkey }}</div>
-			<div><a href="javascript:void()" @click="emitLogOut">Log Out</a></div>
+			<div><a href="javascript:void(0)" @click="emitLogOut">Log Out</a></div>
 		</div>
       	<AddTodo v-on:TaskAdded="addTask"></AddTodo>
       	<List :todos=todos 

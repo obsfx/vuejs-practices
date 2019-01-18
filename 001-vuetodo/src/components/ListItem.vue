@@ -85,8 +85,11 @@ export default {
             const month = date.getUTCMonth() + 1;
             const year = date.getUTCFullYear();
 
-            const h = date.getUTCHours() + 3;
-            const m = date.getUTCMinutes();
+            let h = date.getUTCHours() + 3;
+            let m = date.getUTCMinutes();
+
+            if (h < 10) h = `0${h}`;
+            if (m < 10) m = `0${m}`;
 
             return `${day} / ${month} / ${year} - ${h}:${m}`;
         }
